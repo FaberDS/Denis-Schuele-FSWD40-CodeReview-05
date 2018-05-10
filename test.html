@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body>
+<script>
+	var top_brands = [ 
+  { key: 'Adidas', value: 100 }, 
+  { key: 'Nike', value: 50 }
+];
+
+var $brand_options = $("#top-brands");
+
+$.each(top_brands, function(brand) {
+  $brand_options.append(
+    $("<option />").val(brand.key).text(brand.key + " " + brand.value)
+  );
+});
+
+</script>
+</body>
+</html>

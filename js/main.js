@@ -122,6 +122,17 @@
             likeNote.css("font-weight", "bold");
 
         })
+
+    var trashParent = $("#content");
+    // Sort based on likes 
+    $('#sortBtn').on('click', function () {
+        var sorted = $(".element").sort(function (a, b) {
+            return $(a).find(".likesDisplay").text() < $(b).find(".likesDisplay").text();
+        });
+        trashParent = $("#sortedOutput");
+        $("#sortedOutput").html(sorted);
+    });
+   
         //navbar Button pulls the Navbar down--------------------------------------------------
         $('#navBarLogo').on('click', function() {
             $('#navbar').toggle();
@@ -129,9 +140,10 @@
         //trash Button  delete this Element--------------------------------------------------
         $('.btnTrash').on('click', function() {
             //parentsUntil goes back until the property in the paranthese
-            $(this).parentsUntil("#content").remove();
+            $(this).parentsUntil(trashParent).remove();
 
         })
+
 
         $('.images').mouseover(function() {
             $(this).children('.profileMenu').fadeIn(1000);

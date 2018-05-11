@@ -8,7 +8,7 @@
 .tshadowGrey {
   text-shadow: 2px 2px 4px #666; }
 
-.icons, body #header a[title^='home']::before, body #header a[title^='pro']::before, body #header a[title^='sort']::before, body .likesDisplay::before {
+.icons, body #header a[title^='home']::before, body #header a[title^='pro']::before, body #header a[title^='sort']::before, body #header #navbar p::before, body .likesDisplay::before {
   font-family: "Font Awesome 5 Free";
   padding-right: 20px; }
 
@@ -53,7 +53,7 @@ body {
     float: left;
     margin-left: 50px;
     padding: 15px; }
-  body #header #navbar a {
+  body #header #navbar a, body #header #navbar p {
     text-decoration: none;
     font-size: 35px;
     font-weight: bold;
@@ -62,8 +62,10 @@ body {
     content: ""; }
   body #header a[title^='pro']::before {
     content: ""; }
-  body #header a[title^='sort']::before {
+  body #header a[title^='sort']::before, body #header #navbar p::before {
     content: ""; }
+  body #sortedOutput {
+    background-color: grey; }
   body #content {
     display: flex;
     flex-direction: row;

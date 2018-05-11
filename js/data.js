@@ -24,7 +24,7 @@ var Persons = [
 			surname: 'Twist',
 			favoritePerformers: ["Fidel Castro", "Mohammed Ali", "J. K. Rolling"],
 			age: 23,
-			civilStatus: 'divorced',
+			civilStatus: 'divorce',
 			system: 'PC',
    			myPhoto: "img/image3.jpeg",	
 			likes: 0    
@@ -52,7 +52,7 @@ var Persons = [
 			{
 			name: 'Anna',
 			surname: 'Maier',
-			favoritePerformers: ["Albert Einstein", "Paul McCartney", "Mahatma Gandhi"],
+			favoritePerformers: ["Albert Einstein", "McCartney", " Gandhi"],
 			age: 35,
 			civilStatus: 'single',
 			system: 'Mac',
@@ -61,7 +61,7 @@ var Persons = [
 			},
 			{
 			name: 'Natalie',
-			surname: 'Schmitt',
+			surname: 'Schmit',
 			favoritePerformers: ["Thomas Edison", "Dalai Lama", "Neil Armstrong"],
 			age: 30,
 			civilStatus: 'tricky',
@@ -70,8 +70,8 @@ var Persons = [
 			likes: 0    
 			},
 			{
-			name: 'Alexandra',
-			surname: 'Janusch',
+			name: 'Alexa',
+			surname: 'Janu',
 			favoritePerformers: ["Malcom X", "Ed Sheeran", "Emma Watson"],
 			age: 20,
 			civilStatus: 'married',
@@ -84,7 +84,7 @@ var Persons = [
 			surname: 'Andes',
 			favoritePerformers: ["Nils Holgerson", "Elvis", "Bruce Lee"],
 			age: 32,
-			civilStatus: 'divorced',
+			civilStatus: 'divorce',
 			system: 'Toaster',
    			myPhoto: "img/image9.jpeg",	
 			likes: 0    

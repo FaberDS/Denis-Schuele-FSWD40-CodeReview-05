@@ -69,25 +69,75 @@ var Persons = [
    			myPhoto: "img/image7.jpeg",	
 			likes: 0    
 			},
-			{
-			name: 'Alexa',
-			surname: 'Janu',
-			favoritePerformers: ["Malcom X", "Ed Sheeran", "Emma Watson"],
-			age: 20,
-			civilStatus: 'married',
-			system: 'Mac',
-   			myPhoto: "img/image8.jpeg",	
-			likes: 0    
-			},
-			{
-			name: 'Paula',
-			surname: 'Andes',
-			favoritePerformers: ["Nils Holgerson", "Elvis", "Bruce Lee"],
-			age: 32,
-			civilStatus: 'divorce',
-			system: 'Toaster',
-   			myPhoto: "img/image9.jpeg",	
-			likes: 0    
-			},
+			// {
+			// name: 'Alexa',
+			// surname: 'Janu',
+			// favoritePerformers: ["Malcom X", "Ed Sheeran", "Emma Watson"],
+			// age: 20,
+			// civilStatus: 'married',
+			// system: 'Mac',
+   // 			myPhoto: "img/image8.jpeg",	
+			// likes: 0    
+			// },
+			// {
+			// name: 'Paula',
+			// surname: 'Andes',
+			// favoritePerformers: ["Nils Holgerson", "Elvis", "Bruce Lee"],
+			// age: 32,
+			// civilStatus: 'divorce',
+			// system: 'Toaster',
+   // 			myPhoto: "img/image9.jpeg",	
+			// likes: 0    
+			// },
+			// 			{
+			// name: 'Ela',
+			// surname: 'Joana',
+			// favoritePerformers: ["Nils Henkel", "Dieter Müller", "Ferran Adrian"],
+			// age: 17,
+			// civilStatus: 'tricky',
+			// system: 'Mac',
+   // 			myPhoto: "img/image10.jpeg",	
+			// likes: 0    
+			// },
+			// 			{
+			// name: 'Valerie',
+			// surname: 'Anderson',
+			// favoritePerformers: ["Roca", "The King", "Pierre Herme"],
+			// age: 40,
+			// civilStatus: 'divorce',
+			// system: 'PC',
+   // 			myPhoto: "img/image11.jpeg",	
+			// likes: 0    
+			// },
+			// 			{
+			// name: 'Patrick',
+			// surname: 'Sound',
+			// favoritePerformers: ["Nils Holgerson", "Elvis", "Madonna"],
+			// age: 25,
+			// civilStatus: 'married',
+			// system: 'Mac',
+   // 			myPhoto: "img/image12.jpeg",	
+			// likes: 0    
+			// },
+			// {
+			// name: 'Albert',
+			// surname: 'Dollar',
+			// favoritePerformers: ["Jack Norris", "Elvis", "Bruce Lee"],
+			// age: 40,
+			// civilStatus: 'divorce',
+			// system: 'PC',
+   // 			myPhoto: "img/image13.jpeg",	
+			// likes: 0    
+			// },
+			// 			{
+			// name: 'Ali',
+			// surname: 'Vorbu',
+			// favoritePerformers: ["Mogli", "Ernest Hemingway", "Edgar"],
+			// age: 25,
+			// civilStatus: 'tricky',
+			// system: 'Mac',
+   // 			myPhoto: "img/image14.jpeg",	
+			// likes: 0    
+			// },
 			
 ];

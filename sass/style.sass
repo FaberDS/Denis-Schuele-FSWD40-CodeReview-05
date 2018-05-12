@@ -21,32 +21,38 @@ body
 		#navBarLogo
 			width: 90px
 			height: 95px
-			background-color: $border
+			background-color: $area
 			opacity: 0.7
 			font-size: 80px
 			position: absolute
 			right: 0px
-			top: 305px
+			top: 505px
 			text-align: center
+
 			// padding: 5px
 		#headerBackground
 			background-image: url("../img/header.jpeg")
 			background-repeat: no-repeat
 			background-size: 100% 100%
-			height: 400px
+			height: 600px
 			opacity: 0.5
+			@extend .shadow
+
 		#headerHeadline
 			position: absolute
-			top: 315px
+			top: 15px
+			left: 25px
 			font-size: 70px
+			color: #999
 			font-weight: bold
-			
+			font-family: 'Lobster', cursive
 			#headerHeart
 				color: red
 				font-weight: bold
 		#navbar
 			height: 80px
-			background-color: grey
+			background-color: $area
+			@extend .shadow
 
 		#navbar ul
 		#navbar li
@@ -70,90 +76,208 @@ body
 		a[title^='sort']::before, #navbar p::before
 			content: '\f002'
 			@extend .icons
-	#sortedOutput
-		background-color: grey
-	#content
-		display: flex
-		flex-direction: row    
-		flex-wrap: wrap
-
-	.element
-		float: left
-		border: 1px solid #92A4AA
-		width: 220px
-		height: 620px
-		margin: 20px
-		display: flex
-		box-size: box-border
-		@extend .shadow
-		@extend .bradius
-		justify-content: space-between
-		flex-direction: column
+		//Index Content----------------------------------------------------------------------------------------
+#contentLanding
+	// height: 800px
+	#contentLandingHeader
+		margin-top: 30px
 		text-align: center
+		font-size: 3em
+		font-weight: bold
+		#headerHeart
+			color: red
+			font-weight: bold
+	.indexSlide
+			align-items: center
+			justify-content: center
+			display: flex
+			height: 250px
+			margin-top: 80px 
 
-	.images
-		padding-top: -10px
-		width: 100%
-		// background-color: blue
-		height: 60%
-		img
-			height: 310px
-			// max-width: 100%
+		.card
+			background-color: #fff
+			min-width: 100%
+			min-height: 250px
+			display: flex
+			overflow-x: auto
+		.card::-webkit-scrollbar
+			display: none
+		.card--content
+			background-color: lightgrey
+			background-repeat: no-repeat
+			background-size: 100%
+			min-width: 250px
 			width: 100%
+			margin: 5px
+	#LandingPageImage
+		display: flex
+		justify-content: space-around
+		flex-direction: column
+		#test
 			margin: 0 auto
-			border-radius: 6px 6px 0 0
-		.profileMenu
+		#adlong
+			width: 100%
 			position: relative
-			top: -130px
-			background-color: black
-			opacity: 0.5
-			font-size: 50px
-			color: white
-			z-index: 5
-	.descriptionContainer
-		color: #666
-		margin-top: -120px
+			bottom: 0px
+
+		//Profile Content -------------------------------------------------------------------------------------
+#sortedOutput
+	background-color: grey
+#content
+	display: flex
+	flex-direction: row    
+	flex-wrap: wrap
+
+.element
+	float: left
+	border: 1px solid #92A4AA
+	width: 220px
+	height: 620px
+	margin: 20px
+	display: flex
+	box-size: box-border
+	@extend .shadow
+	@extend .bradius
+	justify-content: space-between
+	flex-direction: column
+	text-align: center
+
+.images
+	padding-top: -10px
+	width: 100%
+	// background-color: blue
+	height: 60%
+	img
+		height: 310px
+		// max-width: 100%
+		width: 100%
+		margin: 0 auto
+		border-radius: 6px 6px 0 0
+	.profileMenu
 		position: relative
-		top: 0px
-		
+		top: -130px
+		background-color: black
+		opacity: 0.5
+		font-size: 50px
+		color: white
+		z-index: 5
+.descriptionContainer
+	color: #666
+	margin-top: -120px
+	position: relative
+	top: 0px
 	
 
-	.descriptionTitle
-		color: black
-		font-weight: 1000
+
+.descriptionTitle
+	color: black
+	font-weight: 1000
+	display: inline
+	font-size: 25px
+// .btnLike
+// 	// position: relative
+// 	// top: -230px	
+// 	float: right
+	
+	
+// .btnMessage
+// 	float: left
+// 	text-align: right
+.btnLike, .btnMessage, .btnTrash
+	border-radius: 50%
+	width: 18%
+	border: 2px solid #92A4AA
+	padding: 5px
+	margin: 8px
+	// background-color: #93A2A0
+	font-size: 2em
+	color: black
+	float: left
+.likesDisplay
+	margin: 0 auto
+	width: 40%
+	color: red
+	font-size: 40px
+	padding: 10px
+
+.likesDisplay::before
+	content: '\f004'
+	@extend .icons
+.fa-heart
+	padding-right: 8px
+#chatBox
+	margin: 0 auto
+	width: 500px
+	height: 540px
+	background-color: #CBCFCE
+	position: absolute
+	z-index: 2
+	top: 550px
+	left: 25%
+	font-size: 30px
+	padding: 30px
+	@extend .shadow
+	@extend .bradius
+	.btn
+		boder: 2px solid $border
+		background-color: white
+		width: 100px
+		font-size: 30px
+		font-weight: 900
 		display: inline
-		font-size: 25px
-	// .btnLike
-	// 	// position: relative
-	// 	// top: -230px	
-	// 	float: right
-		
-		
-	// .btnMessage
-	// 	float: left
-	// 	text-align: right
-	.btnLike, .btnMessage, .btnTrash
-		border-radius: 50%
-		width: 18%
-		border: 2px solid #92A4AA
-		padding: 5px
-		margin: 8px
-		// background-color: #93A2A0
-		font-size: 2em
-		color: black
-		float: left
-	.likesDisplay
+		position: relative
+		top: 26px
 		margin: 0 auto
-		width: 40%
-		color: red
-		font-size: 40px
-		padding: 10px
+		padding: 15px 30px
+		// margin-left: 30px
+		// text-align: center
+	// &:hover
+	// 	font-radius: 4px
+	// 	color: grey
 
-	.likesDisplay::before
-		content: '\f004'
-		@extend .icons
-	.fa-heart
-		padding-right: 8px
+	#chatSubBtn
+		margin-left: 124px
+	#formBox
+		form 
+			margin: 0 auto
+			.label
+				margin-top: 15px
+				font-size: 1.5em
+				font-weight: bold
+		a
+			color: black
+			text-decoration: none
+			clear: right
 
+		input
+			width: 100%
+			padding: 12px 20px
+			border: 1px solid #ccc
+			border-radius: 2px
+			box-sizing: border-box
+			font-size: 1em
+		textarea
+			font-size: 1em
+footer
+	height: 60px
+	background-color: $area
+	width: 100%
+	padding-top: 20px
+	margin-top: 15px
+	text-align: center
+	clear: both
+	font-size: 2em
+	color: white
+	@extend .shadow
+	ul
+		float: left
+	li
+		display: inline
+		margin: 0 10px
+	a
+		color: white
+	p
+		float: right
+		margin-right: 30px
 
 

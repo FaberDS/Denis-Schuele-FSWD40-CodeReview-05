@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.shadow, body .element {
+.shadow, body #header #headerBackground, body #header #navbar, .element, #chatBox, footer {
   box-shadow: 5px 5px 5px #92A4AA; }
 
 .tshadow {
@@ -8,11 +8,11 @@
 .tshadowGrey {
   text-shadow: 2px 2px 4px #666; }
 
-.icons, body #header a[title^='home']::before, body #header a[title^='pro']::before, body #header a[title^='sort']::before, body #header #navbar p::before, body .likesDisplay::before {
+.icons, body #header a[title^='home']::before, body #header a[title^='pro']::before, body #header a[title^='sort']::before, body #header #navbar p::before, .likesDisplay::before {
   font-family: "Font Awesome 5 Free";
   padding-right: 20px; }
 
-.bradius, body .element {
+.bradius, .element, #chatBox {
   border-radius: 6px; }
 
 * {
@@ -24,24 +24,27 @@ body {
   body #header #navBarLogo {
     width: 90px;
     height: 95px;
-    background-color: #92A4AA;
+    background-color: grey;
     opacity: 0.7;
     font-size: 80px;
     position: absolute;
     right: 0px;
-    top: 305px;
+    top: 505px;
     text-align: center; }
   body #header #headerBackground {
     background-image: url("../img/header.jpeg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 400px;
+    height: 600px;
     opacity: 0.5; }
   body #header #headerHeadline {
     position: absolute;
-    top: 315px;
+    top: 15px;
+    left: 25px;
     font-size: 70px;
-    font-weight: bold; }
+    color: #999;
+    font-weight: bold;
+    font-family: "Lobster", cursive; }
     body #header #headerHeadline #headerHeart {
       color: red;
       font-weight: bold; }
@@ -64,68 +67,180 @@ body {
     content: ""; }
   body #header a[title^='sort']::before, body #header #navbar p::before {
     content: ""; }
-  body #sortedOutput {
-    background-color: grey; }
-  body #content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
-  body .element {
-    float: left;
-    border: 1px solid #92A4AA;
-    width: 220px;
-    height: 620px;
-    margin: 20px;
-    display: flex;
-    box-size: box-border;
-    justify-content: space-between;
-    flex-direction: column;
-    text-align: center; }
-  body .images {
-    padding-top: -10px;
-    width: 100%;
-    height: 60%; }
-    body .images img {
-      height: 310px;
-      width: 100%;
-      margin: 0 auto;
-      border-radius: 6px 6px 0 0; }
-    body .images .profileMenu {
-      position: relative;
-      top: -130px;
-      background-color: black;
-      opacity: 0.5;
-      font-size: 50px;
-      color: white;
-      z-index: 5; }
-  body .descriptionContainer {
-    color: #666;
-    margin-top: -120px;
-    position: relative;
-    top: 0px; }
-  body .descriptionTitle {
-    color: black;
-    font-weight: 1000;
-    display: inline;
-    font-size: 25px; }
-  body .btnLike, body .btnMessage, body .btnTrash {
-    border-radius: 50%;
-    width: 18%;
-    border: 2px solid #92A4AA;
-    padding: 5px;
-    margin: 8px;
-    font-size: 2em;
-    color: black;
-    float: left; }
-  body .likesDisplay {
-    margin: 0 auto;
-    width: 40%;
+
+#contentLanding #contentLandingHeader {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold; }
+  #contentLanding #contentLandingHeader #headerHeart {
     color: red;
-    font-size: 40px;
-    padding: 10px; }
-  body .likesDisplay::before {
-    content: ""; }
-  body .fa-heart {
-    padding-right: 8px; }
+    font-weight: bold; }
+#contentLanding .indexSlide .card {
+  background-color: #fff;
+  min-width: 100%;
+  min-height: 250px;
+  display: flex;
+  overflow-x: auto; }
+#contentLanding .indexSlide .card::-webkit-scrollbar {
+  display: none; }
+#contentLanding .indexSlide .card--content {
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-width: 250px;
+  width: 100%;
+  margin: 5px; }
+#contentLanding #LandingPageImage {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column; }
+  #contentLanding #LandingPageImage #test {
+    margin: 0 auto; }
+  #contentLanding #LandingPageImage #adlong {
+    width: 100%;
+    position: relative;
+    bottom: 0px; }
+
+#sortedOutput {
+  background-color: grey; }
+
+#content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.element {
+  float: left;
+  border: 1px solid #92A4AA;
+  width: 220px;
+  height: 620px;
+  margin: 20px;
+  display: flex;
+  box-size: box-border;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center; }
+
+.images {
+  padding-top: -10px;
+  width: 100%;
+  height: 60%; }
+  .images img {
+    height: 310px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 6px 6px 0 0; }
+  .images .profileMenu {
+    position: relative;
+    top: -130px;
+    background-color: black;
+    opacity: 0.5;
+    font-size: 50px;
+    color: white;
+    z-index: 5; }
+
+.descriptionContainer {
+  color: #666;
+  margin-top: -120px;
+  position: relative;
+  top: 0px; }
+
+.descriptionTitle {
+  color: black;
+  font-weight: 1000;
+  display: inline;
+  font-size: 25px; }
+
+.btnLike, .btnMessage, .btnTrash {
+  border-radius: 50%;
+  width: 18%;
+  border: 2px solid #92A4AA;
+  padding: 5px;
+  margin: 8px;
+  font-size: 2em;
+  color: black;
+  float: left; }
+
+.likesDisplay {
+  margin: 0 auto;
+  width: 40%;
+  color: red;
+  font-size: 40px;
+  padding: 10px; }
+
+.likesDisplay::before {
+  content: ""; }
+
+.fa-heart {
+  padding-right: 8px; }
+
+#chatBox {
+  margin: 0 auto;
+  width: 500px;
+  height: 540px;
+  background-color: #CBCFCE;
+  position: absolute;
+  z-index: 2;
+  top: 550px;
+  left: 25%;
+  font-size: 30px;
+  padding: 30px; }
+  #chatBox .btn {
+    boder: 2px solid #92A4AA;
+    background-color: white;
+    width: 100px;
+    font-size: 30px;
+    font-weight: 900;
+    display: inline;
+    position: relative;
+    top: 26px;
+    margin: 0 auto;
+    padding: 15px 30px; }
+  #chatBox:hover {
+    font-radius: 4px;
+    color: grey; }
+  #chatBox #chatSubBtn {
+    margin-left: 124px; }
+  #chatBox #formBox form {
+    margin: 0 auto; }
+    #chatBox #formBox form .label {
+      margin-top: 15px;
+      font-size: 1.5em;
+      font-weight: bold; }
+  #chatBox #formBox a {
+    color: black;
+    text-decoration: none;
+    clear: right; }
+  #chatBox #formBox input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-size: 1em; }
+  #chatBox #formBox textarea {
+    font-size: 1em; }
+
+footer {
+  height: 60px;
+  background-color: grey;
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 15px;
+  text-align: center;
+  clear: both;
+  font-size: 2em;
+  color: white; }
+  footer ul {
+    float: left; }
+  footer li {
+    display: inline;
+    margin: 0 10px; }
+  footer a {
+    color: white; }
+  footer p {
+    float: right;
+    margin-right: 30px; }
 
 /*# sourceMappingURL=style.css.map */

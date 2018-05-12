@@ -1,40 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Love between Brackets</title>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
-
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Love between Brackets</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<div id="header">
-		<div id="headerBackground"></div>
-		<div id="headerHeadline">Love between Brackets<<i id="headerHeart" class='far fa-heart'></i>></div>
-		<div id="navBarLogo"><i class="fas fa-bars"></i></div>
-
-		<div id="navbar">
-		<ul>
-				<li><a href="" title="home">Home</a></li>
-				<li><a href="" title="profile">Profiles</a></li>
-				<li id="sortBtn"><p >Sort</p></li>
-
-			</ul>
-		</div>
-		
-	</div>
-	<div id="sortedOutput">
-		
-	</div>
-	<div id="content">
-		
-	</div>
-
-	<script src="js/data.js"></script>
-	<script src="js/main.js"></script>
+    <div id="wrapper">
+        <div id="header">
+            <div id="headerBackground"></div>
+            <div id="headerHeadline">Love between Brackets
+                < <i id="headerHeart" class='far fa-heart'></i>></div>
+            <div id="navBarLogo"><i class="fas fa-bars"></i></div>
+            <div id="navbar">
+                <ul>
+                    <li><a href="index.html" title="home">Home</a></li>
+                    <li><a href="profile.html" title="profile">Profiles</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="contentLanding">
+            <div id="contentLandingHeader">
+                <h1>[Find your <<i id="headerHeart" class='far fa-heart'></i>> between the lines]</h1>
+            </div>
+            <div class="indexSlide" id="contentIndexSlide">
+                <section  class="slide card">
+                    <div class="card--content" style='background-image: url(img/image0.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image1.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image2.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image3.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image4.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image5.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image6.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image7.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image8.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image9.jpeg)'></div>
+                </section>
+            </div>
+            <div class="indexSlide" id="contentIndexSlide2">
+                <section class="slide card">
+                    <div class="card--content" style='background-image: url(img/image10.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image11.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image12.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image13.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image6.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image0.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image1.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image2.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image3.jpeg)'></div>
+                    <div class="card--content" style='background-image: url(img/image4.jpeg)'></div>
+                </section>
+            </div>
+            <div id="LandingPageImage">
+                <div id="test">
+                    <img src="img/test1.png" alt="">
+                    <img src="img/test.png" alt="">
+                </div>
+                <img id="adlong" src="img/ad.png" alt="">
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="https://www.facebook.com/" title=""><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/?lang=de" title=""><i class="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://www.instagram.com/?hl=de" title=""><i class="fab fa-instagram"></i></a></li>
+            </ul>
+            <p><i class="far fa-copyright"></i> by Denis 2018</p>
+        </footer>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

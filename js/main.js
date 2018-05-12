@@ -1,20 +1,23 @@
+    //Index Page Slide Show---------------------------------------------------------------------------------
+
+    // for (var i = 0; i < members.length; i++) {
+    //     var mem = members[i];
+    //     var likes = mem.likes;
+    //     card += "<div class='card'>" +
+    //         "<div class='profilePic'><img src='" + mem.myPhoto + "'></div>" +
+    //         "<div class='memberData'>" +
+    //         "<b>" + mem.name + " " + mem.surname + "</b><br>" +
+    //         mem.code + "<br>" +
+    //         "<div class='like'><button>LIKE</button> <span class='num'>" + likes + "</span></div><br>" +
+    //         mem.name  +
+    //         "</div>" +
+    //         "</div>";
+    // }
+
+    // //Output on page
+    // $("#memOut").html(card);
+
     //Display Profiles -------------------------------------------------
-    // for (var i = 0; i < Persons.length; i++) {
-    //     document.write("<div class='element' id='price" + i + "'>" +
-    //         "<div class='images'><img src='img/image" + i + ".jpeg'></div>" +
-    //         "<div class='descriptionContainer'><h1 class='nameProduct' id='namePro" + i + "'>" + Persons[i].name + " " + Persons[i].surname + "</h1>" +
-    //         "<h3 class='description'>Favorite Persons: <br>" + Persons[i].favoritePerformers + "</h3>" +
-    //         "<h3 class='description'>Age: </u>" + Persons[i].age + "</h3>" +
-    //         "<h3 class='description'>Civil Status: " + Persons[i].civilStatus + "</h3>" +
-    //         "<h3 class='description'>System: " + Persons[i].system + "</h3>" +
-    //         "<div class='btnLike'>LIKE</div><h1 class='likesDisplay'><i class='far fa-heart'></i>" + Persons[i].likes + "</h1></div></div>");
-    // }
-    // for (var i = 0; i < Persons.length; i++) {
-    //     var
-    // }
-
-
-
     for (var i = 0; i < Persons.length; i++) {
         var b = Persons[i].likes;
 
@@ -44,7 +47,7 @@
         var nam = document.createElement("h1");
         nam.innerHTML += Persons[i].name;
         nam.innerHTML += " " + Persons[i].surname;
-        nam.className = "description";
+        nam.className = "description nam";
         descriptionContainer.appendChild(nam);
 
         //Create ag hold the Age
@@ -86,29 +89,20 @@
         //Create like hold the likes         
         var like = document.createElement("div");
         like.className = "likesDisplay";
-        like.innerHTML += b;
+        like.innerHTML += Persons[i].likes;
         descriptionContainer.appendChild(like);
 
         box.appendChild(descriptionContainer);
 
 
 
-    }
-
-
-
-
-    //Full heart after getting a like--------------------------------------------- 
-    //<i class="fas fa-heart"></i>
-
-    // <i class="fab fa-apple"></i>
-    // <i class="fab fa-windows"></i>
-
-
+    };
     // Like Function ----------------------------------------------------------------------------
     $(document).ready(function() {
-        $('#navbar').hide();
-        $('.profileMenu').hide();
+        //Hide the Navbar the Special Information Menue of the images and the Chatbox -----------------------
+        // $('#navbar').hide();
+        // $('.profileMenu').hide();
+        // $('#chatBox').hide();
 
 
         $('.btnLike').on('click', function() {
@@ -121,48 +115,94 @@
             //When the heart icon get font-weight bold it gets filled so it looks a bit more attractive but just after one like
             likeNote.css("font-weight", "bold");
 
-        })
-
-    var trashParent = $("#content");
-    // Sort based on likes 
-    $('#sortBtn').on('click', function () {
-        var sorted = $(".element").sort(function (a, b) {
-            return $(a).find(".likesDisplay").text() < $(b).find(".likesDisplay").text();
         });
-        trashParent = $("#sortedOutput");
-        $("#sortedOutput").html(sorted);
-    });
-   
-        //navbar Button pulls the Navbar down--------------------------------------------------
-        $('#navBarLogo').on('click', function() {
-            $('#navbar').toggle();
-        })
-        //trash Button  delete this Element--------------------------------------------------
-        $('.btnTrash').on('click', function() {
+
+        var trashParent = $("#content");
+        // Sort based on likes 
+        $('#sortBtn').on('click', function() {
+            console.log("Btn");
+            var sorted = $(".element").sort(function(a, b) {
+                // var first = parseInt($(a).find(".likesDisplay").text());
+                // var second = parseInt($(b).find(".likesDisplay").text());
+                // return  first < second;
+                return Number($(a).find(".likesDisplay").text()) < Number($(b).find(".likesDisplay").text());
+            });
+            sorted.detach().appendTo('#content');
+            // $("#content").html(sorted);
+            //change the parent of Element for the trash button
+
+
+        });
+
+
+
+        //message Button  open Message field--------------------------------------------------
+        $('.btnMessage').on('click', function() {
+            // var chatBox = '';
+            var contactDetail = $(this).parentsUntil("#content");
+            var nm = contactDetail.find(".nam").text();
+            // var chatBoxVariable = $("#chatbox");
+            $("#chatBoxContent").html("Hy my name is <br><em>" + nm + "!</em>" +
+                "<br>Good choice that you want to ");
+
+            $("#content").fadeTo(1000, 0.2);
+            $("#chatBox").show();
+
+        });
+
+
+        //Exit Button  get out of the Message Box--------------------------------------------------
+        $('#chatExitBtn').on('click', function() {
+            console.log("hallo");
             //parentsUntil goes back until the property in the paranthese
-            $(this).parentsUntil(trashParent).remove();
+            $("#content").css("opacity", "1");
+            $("#chatBox").hide();
 
-        })
 
-
+        });
+        // Mouseover Effect on the Images to show more information ----------------------------------
         $('.images').mouseover(function() {
             $(this).children('.profileMenu').fadeIn(1000);
             console.log("over");
-        })
+        });
         $('.images').mouseleave(function() {
             $(this).children('.profileMenu').fadeOut(1000);
             console.log("over");
-        })
+        });
 
+        //Submit from Contactbox -----------------------------------------------------------------
+        $("#chatSubBtn").click(function() {
+            var nm = $("input:text").val();
+            var txt = $("textarea").val()
+             // alert("Thank you " + nm + " ! I will answer your message early as possible");
+             //        $("#content").css("opacity", "1");
+             //        $("#chatBox").hide();
+            checkInput(nm,txt);
 
-        // Sort Ansatz
-            // var list = [];
-            // list = document.getElementsByClassName("element");
-            // for (var i = 0; i < list.length; i++) {
-            // 	var a = list[i].children(".likeDisplay");
-            //     var b = parseInt(a.val());
-            //     console.log(b);
-            // }
+        });
+
+        function checkInput(a,b) {
+            if (a.length >= 2 && a.length <= 30) {
+                console.log("if1");
+                if (b.length >= 2 ) {
+                    alert("Thank you " + a + " ! I will answer your message early as possible");
+                    $("#content").css("opacity", "1");
+                    $("#chatBox").hide();
+                    $("input:text").val("");
+                    $("textarea").val("");
+                    console.log("if2");
+
+                } else {
+                    alert("Please enter your Message");
+                    console.log("else2");
+
+                }
+            } else {
+                alert("Please enter your name");
+                console.log("else1");
+
+            }
+        };
 
 
 

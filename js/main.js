@@ -1,21 +1,19 @@
-    //Index Page Slide Show---------------------------------------------------------------------------------
 
-    // for (var i = 0; i < members.length; i++) {
-    //     var mem = members[i];
-    //     var likes = mem.likes;
-    //     card += "<div class='card'>" +
-    //         "<div class='profilePic'><img src='" + mem.myPhoto + "'></div>" +
-    //         "<div class='memberData'>" +
-    //         "<b>" + mem.name + " " + mem.surname + "</b><br>" +
-    //         mem.code + "<br>" +
-    //         "<div class='like'><button>LIKE</button> <span class='num'>" + likes + "</span></div><br>" +
-    //         mem.name  +
-    //         "</div>" +
-    //         "</div>";
-    // }
+    //Up Link -----------------------------------------------------------------------
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() { scrollFunction() };
 
-    // //Output on page
-    // $("#memOut").html(card);
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("upLink").style.display = "block";
+        } else {
+            document.getElementById("upLink").style.display = "none";
+        }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
     //Display Profiles -------------------------------------------------
     for (var i = 0; i < Persons.length; i++) {
@@ -118,7 +116,7 @@
         });
 
         var trashParent = $("#content");
-        // Sort based on likes 
+        // Sort based on likes---------------------------------------------------------------------------------------------------------------------
         $('#sortBtn').on('click', function() {
             console.log("Btn");
             var sorted = $(".element").sort(function(a, b) {
@@ -136,7 +134,7 @@
 
 
 
-        //message Button  open Message field--------------------------------------------------
+        //message Button  open Message field---------------------------------------------------------------------------------------------------------------------
         $('.btnMessage').on('click', function() {
             // var chatBox = '';
             var contactDetail = $(this).parentsUntil("#content");
@@ -151,7 +149,7 @@
         });
 
 
-        //Exit Button  get out of the Message Box--------------------------------------------------
+        //Exit Button  get out of the Message Box---------------------------------------------------------------------------------------------------------------------
         $('#chatExitBtn').on('click', function() {
             console.log("hallo");
             //parentsUntil goes back until the property in the paranthese
@@ -170,21 +168,21 @@
             console.log("over");
         });
 
-        //Submit from Contactbox -----------------------------------------------------------------
+        //Submit from Contactbox ---------------------------------------------------------------------------------------------------------------------
         $("#chatSubBtn").click(function() {
             var nm = $("input:text").val();
             var txt = $("textarea").val()
-             // alert("Thank you " + nm + " ! I will answer your message early as possible");
-             //        $("#content").css("opacity", "1");
-             //        $("#chatBox").hide();
-            checkInput(nm,txt);
+            // alert("Thank you " + nm + " ! I will answer your message early as possible");
+            //        $("#content").css("opacity", "1");
+            //        $("#chatBox").hide();
+            checkInput(nm, txt);
 
         });
-
-        function checkInput(a,b) {
+        //Input Validierung ---------------------------------------------------------------------------------------------------------------------
+        function checkInput(a, b) {
             if (a.length >= 2 && a.length <= 30) {
                 console.log("if1");
-                if (b.length >= 2 ) {
+                if (b.length >= 2) {
                     alert("Thank you " + a + " ! I will answer your message early as possible");
                     $("#content").css("opacity", "1");
                     $("#chatBox").hide();

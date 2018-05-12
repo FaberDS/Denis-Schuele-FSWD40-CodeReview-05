@@ -16,22 +16,19 @@
     <div id="wrapper">
         <div id="header">
             <div id="headerBackground"></div>
-            <div id="headerHeadline">Love between Brackets
-                < <i id="headerHeart" class='far fa-heart'></i>></div>
+            <div id="headerHeadline">Love between Brackets< <i id="headerHeart" class='far fa-heart'></i>></div>
             <div id="navBarLogo"><i class="fas fa-bars"></i></div>
-            <div id="navbar">
-                <ul>
-                    <li><a href="index.html" title="home">Home</a></li>
-                    <li><a href="profile.html" title="profile">Profiles</a></li>
-                    <li id="sortBtn">
-                        <p>Sort</p>
-                    </li>
-                </ul>
-            </div>
+            <ul id="navbar">
+                <li><a href="index.html" title="home">Home</a></li>
+                <li><a href="profile.html" title="profile">Profiles</a></li>
+                <li id="sortBtn">
+                    <p>Sort</p>
+                </li>
+            </ul>
         </div>
         <div id="content">
         </div>
-        <div id="chatBox">
+        <div id="chatBox" >
             <div id="chatBoxContent"></div>
             <div id="formBox">
                 <form>
@@ -43,9 +40,12 @@
                     <textarea name="" rows="3" cols="34"></textarea>
                 </form>
             </div>
-            <div id="chatExitBtn" class="btn"><i class='fas fa-times'></i>Cancel</div>
-            <div id="chatSubBtn" class="btn"><i class="far fa-check-circle"></i>Submit</div>
+            <div id="btnChatBox">
+                <button id="chatExitBtn" class="btn"><i class='fas fa-times'></i> Cancel</button>
+                <button id="chatSubBtn" class="btn"><i class="far fa-check-circle"></i> Submit</button>
+            </div>
         </div>
+        <button onclick="topFunction()" id="upLink" title="Go to top">up</button>        
         <footer>
             <ul>
                 <li><a href="https://www.facebook.com/" title=""><i class="fab fa-facebook"></i></a></li>
@@ -57,7 +57,6 @@
         <script src="js/data.js"></script>
         <script src="js/main.js"></script>
         <script src="js/index.js"></script>
-
 </body>
 
 </html>

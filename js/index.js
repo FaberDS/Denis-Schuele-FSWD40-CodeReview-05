@@ -6,8 +6,12 @@
 
             //navbar Button pulls the Navbar down--------------------------------------------------
             $('#navBarLogo').on('click', function() {
-                $('#navbar').toggle();
+                var navbar = $('#navbar');
+                navbar.toggle()
+
             });
+            //Change the top value of the Chatbox -----------------------------------------------------
+           
             //trash Button  delete this Element--------------------------------------------------
             $('.btnTrash').on('click', function() {
                 //parentsUntil goes back until the property in the paranthese

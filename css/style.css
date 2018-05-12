@@ -1,4 +1,75 @@
 @charset "UTF-8";
+@media screen and (max-width: 1025px) {
+  #headerBackground {
+    height: 300px !important; }
+
+  #navBarLogo {
+    top: 205px !important; }
+
+  #headerHeadline {
+    font-size: 50px !important; }
+
+  #contentLandingHeader {
+    font-size: 30px !important; }
+
+  #contentLandingSubtitle {
+    font-size: 20px !important; }
+
+  #test {
+    text-align: center !important; }
+
+  #chatBox {
+    top: 375px !important; }
+
+  .element {
+    margin: 0 auto !important;
+    margin-top: 10px !important; }
+
+  #chatSubBtn {
+    left: 10% !important; } }
+@media screen and (max-width: 770px) {
+  #navbar a, #navbar p {
+    font-size: 25px !important; }
+
+  #testImg1 {
+    width: 400px !important; }
+
+  .testImgs {
+    width: 300px !important; }
+
+  #chatBox {
+    width: 380px !important; }
+
+  .btn {
+    padding: 15px 22px !important; } }
+@media screen and (max-width: 770px) {
+  #navbar {
+    height: auto !important; }
+
+  #navbar li {
+    float: none !important; }
+
+  #chatBox {
+    top: 483px !important; } }
+@media screen and (max-width: 625px) {
+  #chatBox {
+    left: 12% !important; }
+
+  #headerHeadline {
+    font-size: 40px !important; } }
+@media screen and (max-width: 500px) {
+  #chatBox {
+    left: 4% !important;
+    width: 320px !important; }
+
+  .btn {
+    margin: 20px 10px !important; }
+
+  footer {
+    height: 35px !important;
+    font-size: 1.4em !important;
+    padding-top: 10px;
+    margin-top: 10px; } }
 .shadow, body #header #headerBackground, body #header #navbar, .element, #chatBox, footer {
   box-shadow: 5px 5px 5px #92A4AA; }
 
@@ -49,14 +120,17 @@ body {
       color: red;
       font-weight: bold; }
   body #header #navbar {
-    height: 80px;
-    background-color: grey; }
+    height: 75px;
+    background-color: grey;
+    width: 100%;
+    margin-bottom: 30px; }
   body #header #navbar li {
     list-style: none;
     float: left;
     margin-left: 50px;
     padding: 15px; }
   body #header #navbar a, body #header #navbar p {
+    display: block;
     text-decoration: none;
     font-size: 35px;
     font-weight: bold;
@@ -67,17 +141,27 @@ body {
     content: ""; }
   body #header a[title^='sort']::before, body #header #navbar p::before {
     content: ""; }
+  body #header #navbar a:hover {
+    color: #ff3232; }
+  body #header #navbar p:hover {
+    color: #ff3232; }
 
-#contentLanding #contentLandingHeader {
+#contentLanding #contentLandingHeader, #contentLanding #contentLandingSubtitle {
   margin-top: 30px;
   text-align: center;
-  font-size: 3em;
   font-weight: bold; }
-  #contentLanding #contentLandingHeader #headerHeart {
+  #contentLanding #contentLandingHeader #headerHeart, #contentLanding #contentLandingSubtitle #headerHeart {
     color: red;
     font-weight: bold; }
+#contentLanding #contentLandingHeader {
+  font-size: 3em; }
+#contentLanding #contentLandingSubtitle {
+  font-size: 2em;
+  margin: 20px; }
+  #contentLanding #contentLandingSubtitle #contentLandingSubtitle h4 {
+    padding: 15px; }
 #contentLanding .indexSlide .card {
-  background-color: #fff;
+  background-color: white;
   min-width: 100%;
   min-height: 250px;
   display: flex;
@@ -97,6 +181,10 @@ body {
   flex-direction: column; }
   #contentLanding #LandingPageImage #test {
     margin: 0 auto; }
+    #contentLanding #LandingPageImage #test .testImgs {
+      margin: 40px 25px; }
+    #contentLanding #LandingPageImage #test #testImg2 {
+      height: 180px; }
   #contentLanding #LandingPageImage #adlong {
     width: 100%;
     position: relative;
@@ -116,8 +204,8 @@ body {
   width: 220px;
   height: 620px;
   margin: 20px;
-  display: flex;
   box-size: box-border;
+  display: flex;
   justify-content: space-between;
   flex-direction: column;
   text-align: center; }
@@ -176,32 +264,25 @@ body {
   padding-right: 8px; }
 
 #chatBox {
+  top: 675px;
   margin: 0 auto;
   width: 500px;
-  height: 540px;
   background-color: #CBCFCE;
   position: absolute;
   z-index: 2;
-  top: 550px;
-  left: 25%;
+  left: 28%;
   font-size: 30px;
   padding: 30px; }
+  #chatBox #btnChatBox {
+    display: inline; }
   #chatBox .btn {
     boder: 2px solid #92A4AA;
     background-color: white;
-    width: 100px;
-    font-size: 30px;
-    font-weight: 900;
-    display: inline;
-    position: relative;
-    top: 26px;
-    margin: 0 auto;
+    font-size: 20px;
+    margin: 20px 40px;
     padding: 15px 30px; }
-  #chatBox:hover {
-    font-radius: 4px;
-    color: grey; }
   #chatBox #chatSubBtn {
-    margin-left: 124px; }
+    margin: 0 auto; }
   #chatBox #formBox form {
     margin: 0 auto; }
     #chatBox #formBox form .label {
@@ -220,7 +301,28 @@ body {
     box-sizing: border-box;
     font-size: 1em; }
   #chatBox #formBox textarea {
-    font-size: 1em; }
+    font-size: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%; }
+
+#upLink {
+  display: none;
+  position: fixed;
+  text-decoration: none;
+  bottom: 80px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  opacity: 0.7; }
 
 footer {
   height: 60px;
